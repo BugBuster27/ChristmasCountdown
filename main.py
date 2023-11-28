@@ -5,9 +5,12 @@ from datetime import datetime, timedelta
 pygame.init()
 window_size = (250, 60)
 screen = pygame.display.set_mode(window_size)
-pygame.display.set_caption("Christmas Countdown")
+pygame.display.set_caption("Xmas Count")
 pygame.font.init()
 font = pygame.font.SysFont('Copperplate Gothic', 20, bold=True)
+
+img_icon = pygame.image.load("./icon.png")
+pygame.display.set_icon(img_icon)
 
 
 class Snowflake:
