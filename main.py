@@ -3,7 +3,7 @@ import random
 from datetime import datetime, timedelta
 
 pygame.init()
-window_size = (250, 150)
+window_size = (250, 60)
 screen = pygame.display.set_mode(window_size)
 pygame.display.set_caption("Christmas Countdown")
 pygame.font.init()
@@ -53,7 +53,7 @@ while running:
 
     screen.fill((0, 135, 62))
 
-    if len(snowflakes) < 100:
+    if len(snowflakes) < 20:
         snowflakes.append(Snowflake())
 
     for flake in snowflakes:
@@ -64,7 +64,7 @@ while running:
 
     daysText = font.render(f"Days Until Finish:", True, (157, 34, 53))
     daysValueText = font.render(f"{workdays_left}", True, (157, 34, 53))
-    screen.blit(daysText, (window_size[0] // 11, 10))
+    screen.blit(daysText, (window_size[0] // 9, 10))
     screen.blit(daysValueText, ((window_size[0] + 80) // 3, 32))
 
     pygame.display.flip()
